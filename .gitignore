@@ -1,0 +1,27 @@
+# Build outputs
+build/
+.gradle/
+*.class
+*.jar
+*.war
+*.ear
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Decompiled source should NEVER be in this repo
+outputs/
+*.java
