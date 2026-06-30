@@ -5,13 +5,14 @@ Public artifacts for the Crates DJ music library API. Reverse-engineered from th
 ## What's Inside
 
 - `specs/` - OpenAPI 3.0.3 specs per Crates.app version. `specs/latest` is a symlink to the newest version.
+- `CHANGELOG.md` - generated spec changelog entries comparing each version with its predecessor.
 - `crates-api-kotlin/` - Kotlin client library generated from the OpenAPI spec (Ktor + coroutines + kotlinx.serialization).
 - `crates-api-mcp/` - MCP server exposing the Crates API to LLMs.
 - `crates-api-skill.md` - Skill file / system prompt for LLMs that need to use the API.
 
 ## Latest Version
 
-`1.15.1` - see `specs/latest/openapi.yaml`.
+`1.15.3-beta.1` - see `specs/latest/openapi.yaml`.
 
 ## Requirements & Notes
 
@@ -27,6 +28,8 @@ ls specs/latest/openapi.yaml
 ```
 
 If a new Crates release has no spec changes, the tooling symlinks its version folder to the previous version's folder.
+When a release does change the spec, the tooling also writes a per-version Markdown diff such as
+`specs/1.15.3-beta.1/diff-from-1.15.1.md`.
 
 ## Kotlin Client
 
